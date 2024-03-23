@@ -3,22 +3,28 @@ CREATE DATABASE techblog_db;
 
 \c techblog_db;
 
-CREATE TABLE user (
-    id INTEGER, 
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY, 
     username VARCHAR(30),
     password VARCHAR(30)
 );
 
-CREATE TABLE comment (
-    id INTEGER,
-    post_id INTEGER,
-    user_id INTEGER,
-    content VARCHAR(250)
-);
-
 CREATE TABLE post (
-    id INTEGER, 
+    id SERIAL PRIMARY KEY, 
     user_id INTEGER,
     title VARCHAR(50),
-    content VARCHAR(250)
-)
+    content VARCHAR(250), 
+    FOREIGN KEY (user_id)
+    REFERENCES users(id)
+);
+
+CREATE TABLE comment (
+    id SERIAL PRIMARY KEY,
+    post_id INTEGER,
+    user_id INTEGER,
+    content VARCHAR(250), 
+    FOREIGN KEY (post_id)
+    REFERENCES post (id), 
+    FOREIGN KEY (user_id)
+    REFERENCES users(id)
+);
