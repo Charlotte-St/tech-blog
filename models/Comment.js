@@ -18,6 +18,10 @@ Comment.init (
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
+        }, 
+        content: {
+            type: DataTypes.TEXT('medium'),
+            allowNull: false
         }
     },
     {
