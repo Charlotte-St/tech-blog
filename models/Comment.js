@@ -13,11 +13,19 @@ Comment.init (
         },
         post_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            references: {
+                model: 'post',
+                key: 'id'
+            }
         },
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references: {
+                model: 'user',
+                key: 'id'
+            }
         }, 
         content: {
             type: DataTypes.TEXT('medium'),
