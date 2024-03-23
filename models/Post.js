@@ -24,7 +24,7 @@ Post.init (
             allowNull: false
         },
         content: {
-            type: DataTypes.TEXT('medium'),
+            type: DataTypes.STRING,
             allowNull: false,
         }
     },

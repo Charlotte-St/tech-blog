@@ -13,11 +13,10 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const post of postData) {
-    await Post.create({
-      ...post
+  /*for (const post of postData) {
+    await Post.create({post
     });
-  }
+  }*/
 
   process.exit(0);
 };
