@@ -30,8 +30,8 @@ router.post('/', async (req, res)=>{
 
 //Login
 
-router.get('/login', (req, res) => {
-  const userData = User.findOne({ where: {'username': req.body.username}}).then((userData) => {
+/*router.get('/login', (req, res) => {
+  const userData = User.findOne({ where: {'username': req.body.username}})/*.then((userData) => {
       res.json(userData);
   });
 
@@ -40,7 +40,7 @@ router.get('/login', (req, res) => {
     return
   }
 
-});
+}); */
 
 
 router.post('/login', async (req, res) => {
