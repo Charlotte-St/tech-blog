@@ -7,7 +7,7 @@
   </div>
   <div class="card-body">
     <p class="card-text">{{post.content}}</p>
-    <p> <form class="form del-post-form"><button type="submit">Delete Post</button></form>
+    <p> <form class="form del-post-form"><button type="submit" data-id="{{post.id}}">Delete Post</button></form>
     <form action="/edit/{{post.id}}" class="nav-link active"><button type="submit">Edit Post</button></form></p>
   </div>
 </div>
