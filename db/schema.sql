@@ -6,7 +6,7 @@ CREATE DATABASE techblog_db;
 CREATE TABLE users (
     id SERIAL PRIMARY KEY, 
     username VARCHAR(30),
-    password VARCHAR(30)
+    password VARCHAR(100)
 );
 
 CREATE TABLE post (
