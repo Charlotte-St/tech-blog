@@ -1,5 +1,12 @@
 <div class="container">
     <div class="row">
+        <div class="col-6 offset-md-3">
+            {{#each posts as |post|}}
+            <a href="/post/{{post.id}}">{{post.title}}</a>
+            {{/each}}
+        </div>
+    </div>
+    <!--<div class="row">
         <div class="col-6 offset-md-3"> 
  <form class="form new-post-form">
     <div class="form-group">
@@ -14,10 +21,12 @@
     <div class="form-group">
         <button class="btn btn-primary" type="submit">Post</button>
     </div>
-</form>
+</form>-->
+<form action="/new" class="nav-link active"><button type="submit">Add a new post</button></form>
 
   </div>
 </div>
 </div>
+
 
 <script src="./js/dashboard.js"></script>
