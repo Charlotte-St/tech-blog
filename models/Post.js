@@ -28,6 +28,11 @@ Post.init (
             type: DataTypes.STRING,
             allowNull: false,
             unique: true
+        },
+        date_created: {
+            type: DataTypes.DATEONLY, 
+            defaultValue: DataTypes.NOW,
+            allowNull: false
         }
     },
     {

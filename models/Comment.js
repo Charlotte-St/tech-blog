@@ -30,6 +30,11 @@ Comment.init (
         content: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        date_created: {
+            type: DataTypes.DATEONLY, 
+            defaultValue: DataTypes.NOW,
+            allowNull: false
         }
     },
     {
