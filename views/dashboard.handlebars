@@ -1,10 +1,18 @@
 <div class="container">
+    <div class="row">
+        <div class="col-6 offset-md-3">
+            <form action="/new" class="nav-link active"><button type="submit">Add a new post</button></form>
+     <!--   </div>
+    </div>-->
+    </br>
+    </br>
 
+            <div class="card">
+               <div class="card-header"> <h3>Your Current Posts</h3></div>
+    </div>
             {{#each posts as |post|}}
-                <div class="row">
-                <div class="col-6 offset-md-3">
-            <a href="/post/{{post.id}}">{{post.title}}</a> on {{post.date_created}}
-            </div></div>
+                    <div class="card">
+            <a href="/post/{{post.id}}">{{post.title}}</a> on {{post.date_created}}</div>
             {{/each}}
 
 
@@ -24,7 +32,6 @@
         <button class="btn btn-primary" type="submit">Post</button>
     </div>
 </form>-->
-<form action="/new" class="nav-link active"><button type="submit">Add a new post</button></form>
 
   </div>
 </div>
