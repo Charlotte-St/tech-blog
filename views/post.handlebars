@@ -7,10 +7,11 @@
   </div>
   <div class="card-body">
     <p class="card-text">{{post.content}}</p>
+    <p> <form action="/new" class="form del-post-form"><button type="submit">Delete post</button></form></p>
   </div>
 </div>
 
-{{!--{{#each comments as [comment]}}
+{{#each comments as |comment|}}
 <div class="card">
   <div class="card-header">
    comment by {{comment.user_id}}
@@ -20,8 +21,33 @@
   </div>
 </div>
 
-{{/each}}--}}
+{{/each}}
+
+
+<div class="card">
+  <div class="card-header">
+ Add a comment
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <form class="form new-comment-form">
+    <div class="form-group">
+         <label for="comment-content" class="form-label">Comment: </label>
+        <textarea class="form-input form-control" type="text" max-length="250" id="comment-content"></textarea>
+    </div>
+    </br>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Post Comment</button>
+    </div>
+</form>
+    </p>
+  </div>
+</div>
+
 
 </div>
 </div> 
 </div>
+
+<script src="/js/comment.js"></script>
+<script src="/js/deletePost.js"></script>

@@ -95,4 +95,42 @@ router.get('/login', (req, res) => {
   res.render('login');
 }); 
 
+/*outer.get('/:id', async (req, res) => {
+  try {
+    const commentData = await Comment.findAll({
+    where: {
+      id: req.params.id
+    }
+    });
+
+    const comment = commentData.get({ plain: true });
+
+    res.render('post', {
+      comment,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})*/
+
+
+router.get('/post/:id', async (req, res) => {
+  try {
+    const commentData = await Comment.findAll({
+      where: {post_id: req.params.id}
+    });
+
+    console.log(commentData);
+    const comment = commentData.get({ plain: true });
+
+    res.render('post', {
+      ...comment,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

@@ -21,7 +21,7 @@ const newFormHandler = async (event) => {
     }
   };
   
-  const delButtonHandler = async (event) => {
+ /* const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
@@ -35,13 +35,13 @@ const newFormHandler = async (event) => {
         alert('Failed to delete a post');
       }
     }
-  };
+  };*/
   
   document
     .querySelector('.new-post-form')
     .addEventListener('submit', newFormHandler);
   
- /* document
-    .querySelector('.post-list')
-    .addEventListener('click', delButtonHandler); */
+ /*document
+    .querySelector('.del-post-form')
+    .addEventListener('click', delButtonHandler);*/
   
