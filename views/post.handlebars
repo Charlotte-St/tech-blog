@@ -3,7 +3,7 @@
         <div class="col-8 offset-md-2">
 <div class="card">
   <div class="card-header">
-   {{post.title}} by {{users.username}} on {{post.date_created}}
+   {{post.title}} by {{post.user.username}} on {{post.date_created}}
   </div>
   <div class="card-body">
     <p class="card-text">{{post.content}}</p>
