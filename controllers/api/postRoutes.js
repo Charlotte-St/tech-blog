@@ -46,7 +46,7 @@ router.delete('/:id', withAuth, async (req, res) => {
 
 //Update Post
 
-router.put('/:id', withAuth, async (req, res) => {
+router.put('/edit/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.update({
       title: req.body.title, 
