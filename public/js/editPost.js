@@ -4,8 +4,10 @@ const editPostHandler = async (event) => {
     const title = document.querySelector('#post-title').value.trim();
     const content = document.querySelector('#post-content').value.trim();
     const id = window.location.toString().split('/')[window.location.toString().split('/').length-1];
-  
-      const response = await fetch(`/api/post/edit/${id}`, {
+    const idVal = id.replace('?', '');
+
+    console.log(idVal);
+      const response = await fetch(`/api/post/edit/${idVal}`, {
         method: 'PUT',
         body: JSON.stringify({ id, title, content }),
         headers: {
