@@ -15,7 +15,7 @@
 {{#each post.comments as |comment|}}
 <div class="card">
   <div class="card-header">
-   comment by {{comment.user_id}}
+   comment by {{comment.user.username}} on {{comment.date_created}}
   </div>
   <div class="card-body">
     <p class="card-text">{{comment.content}}</p>
