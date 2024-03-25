@@ -24,25 +24,29 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/post/:id', async (req, res) => {
+router.get('/post/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
         {
           model: User,
           attributes: ['username'],
-        }/*,{
+        }, {
           model: Comment, 
           attributes: ['user_id', 'content']
-        }*/
+        }
       ],
     });
 
+   // const commentData = await Comment.findAll({where: {post_id: req.params.id}});
+    
     const post = postData.get({ plain: true });
+   // const comment = commentData.get({plain: true});
 
     res.render('post', {
       post,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      //comment
     });
   } catch (err) {
     res.status(500).json(err);
