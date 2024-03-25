@@ -23,7 +23,7 @@ Comment.init (
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'users',
+                model: 'user',
                 key: 'id'
             }
         }, 
@@ -43,7 +43,7 @@ Comment.init (
         freezeTableName: true,
         underscored: true,
         modelName: 'comment',
-        //tableName: 'comment'
+        tableName: 'comment'
     }
 );
 
