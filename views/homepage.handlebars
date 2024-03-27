@@ -1,14 +1,14 @@
 <div class="container">
     <div class="row">
         <div class="col-8 offset-md-2">
-{{#each posts as |post|}}
+{{#each posts}}
 
 <div class="card">
   <div class="card-header">
-   <a href="/post/{{post.id}}">{{post.title}}</a> by {{post.user.username}} on {{post.date_created}}
+   <a href="/post/{{id}}">{{title}}</a> by {{user.username}} on {{date_created}}
   </div>
   <div class="card-body">
-    <p class="card-text">{{post.content}}</p>
+    <p class="card-text">{{content}}</p>
   </div>
 </div>
 {{/each}}

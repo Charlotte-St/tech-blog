@@ -8,9 +8,10 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username']
+          attributes: ['username', 'id']
         },
       ],
+      /*include: [User],*/
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
