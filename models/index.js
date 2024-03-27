@@ -28,6 +28,6 @@ Post.hasMany(Comment, {
 /*Comment.belongsTo(Post, {
     foreignKey: 'post_id'
 });*/
-Comment.belondsTo(Post);
+Comment.belongsTo(Post);
 
 module.exports = { User, Post, Comment };
