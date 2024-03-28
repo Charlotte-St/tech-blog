@@ -6,6 +6,10 @@
 
 This app allows users to create an account, log in, write posts, and comment on posts. Users are allowed to edit and delete posts after writing them. This app is a simple content management system that could be used as a blogging platform. 
 
+
+[Tech Blog Live Site](https://tech-blog-deployment.onrender.com/)
+
+
 ## Installation
 
 This app is hosted on Render, so it does not require installation. 
